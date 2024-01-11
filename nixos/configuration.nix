@@ -206,6 +206,7 @@
       ntfs3g
       onlyoffice-bin
       pciutils
+      pfetch
       radeontop
       shortwave
       smartmontools
