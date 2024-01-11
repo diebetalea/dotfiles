@@ -191,6 +191,7 @@
       evince
       eza
       fsearch
+      gitFull
       glxinfo
       gnome.gnome-disk-utility
       google-chrome
