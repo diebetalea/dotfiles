@@ -204,6 +204,7 @@
       mcfly
       microsoft-edge
       neofetch
+      nextcloud-client
       ntfs3g
       onlyoffice-bin
       pciutils
