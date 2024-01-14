@@ -1,4 +1,4 @@
-# aceraspire3 specific config
+# aceraspire specific config
 { config, pkgs, inputs, ... }: {
   
   imports = [

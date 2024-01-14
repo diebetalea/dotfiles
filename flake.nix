@@ -77,7 +77,7 @@
     in {
       # update with `nix flake update`
       # rebuild with `nixos-rebuild switch --flake .#<INSERT HOST HERE>`
-      aceraspire3 = mkHost "aceraspire3";
+      aceraspire = mkHost "aceraspire";
     };
   };
 }
