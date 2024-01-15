@@ -133,14 +133,6 @@
   nix = {
     # Enable the flake command
     extraOptions = "experimental-features = nix-command flakes";
-    settings = {
-      extra-substituters = [
-        "https://viperml.cachix.org"
-      ];
-      extra-trusted-public-keys = [
-        "viperml.cachix.org-1:qZhKBMTfmcLL+OG6fj/hzsMEedgKvZVFRRAhq7j8Vh8="
-      ];
-    };
   };
 
 
@@ -182,7 +174,6 @@
       MOZ_ENABLE_WAYLAND = "1";
     };
     systemPackages = with pkgs; [
-      inputs.nh.packages.x86_64-linux.default
       anydesk
       btop
       cmatrix
@@ -205,6 +196,7 @@
       microsoft-edge
       neofetch
       nextcloud-client
+      nh
       ntfs3g
       onlyoffice-bin
       pciutils
@@ -245,18 +237,6 @@
     ubuntu_font_family
     vegur
   ];
-
-  # Show the differences after a rebuild.
-  system = {
-    activationScripts = {
-      diff = {
-        supportsDryActivation = true;
-        text = ''
-          ${pkgs.nvd}/bin/nvd --nix-bin-dir=${pkgs.nix}/bin diff /run/current-system "$systemConfig"
-        '';
-      };
-    };
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
