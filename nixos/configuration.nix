@@ -1,9 +1,12 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }: {
-  
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   # Bootloader, Kernel, Params and modules
   boot = {
     # Specify kernel modules that are being loaded on all devices
@@ -14,9 +17,12 @@
       enable = false;
     };
 
-    # Increase the vm.max_map_count 
+    # Increase the vm.max_map_count
     kernel = {
-      sysctl = {"vm.max_map_count" = 2147483642 ; "vm.swappiness" = 5; };
+      sysctl = {
+        "vm.max_map_count" = 2147483642;
+        "vm.swappiness" = 5;
+      };
     };
   };
 
@@ -32,7 +38,7 @@
     networkmanager = {
       enable = true;
     };
-  };  
+  };
 
   # Set your time zone.
   time = {
@@ -135,8 +141,6 @@
     extraOptions = "experimental-features = nix-command flakes";
   };
 
-
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     users = {
@@ -163,8 +167,6 @@
     # Set the limit to double the RAM
     memoryPercent = 50;
   };
-
-  
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -212,6 +214,8 @@
       unzip
       vesktop
       virt-viewer
+      vivaldi
+      vivaldi-ffmpeg-codecs
       vlc
       wget
       whatsapp-for-linux
