@@ -18,7 +18,7 @@
       };
     };
 
-    kernelPackages = pkgs.linuxPackages_lqx;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking = {
