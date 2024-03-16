@@ -9,10 +9,10 @@
             enable = true;
           };
         };
-        desktopManager = {
-          plasma5 = {
-            enable = true;
-          };
+      };
+      desktopManager = {
+        plasma6 = {
+          enable = true;
         };
       };
 
@@ -41,11 +41,11 @@
     # KDE-specific packages
     environment = {
       systemPackages = with pkgs; [
+        pciutils
+      ] ++ (with kdePackages; [
+        filelight
         kate
         kcalc
-        pciutils
-      ] ++ (with libsForQt5; [
-        filelight
         kwallet-pam
       ]);
     };

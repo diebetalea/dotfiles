@@ -4,7 +4,7 @@
   config = {
     environment = {
       systemPackages = with pkgs; [
-      ] ++ (with libsForQt5; [
+      ] ++ (with kdePackages; [
         bomber
         bovo
         granatier
